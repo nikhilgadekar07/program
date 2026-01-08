@@ -47,6 +47,6 @@ jobs:
     steps:
        - uses: actions/checkout@v4
        - name: complie
-         run: mvn complie
+         run: mvn compile
 
         
