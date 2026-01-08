@@ -42,3 +42,11 @@ jobs:
             echo second,
             echo build.
 
+  compile:
+    runs-on: Ubuntu-latest
+    steps:
+       - uses: actions/checkout@v4
+       - name: complie
+         run: mvn complie
+
+        
