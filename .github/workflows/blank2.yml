@@ -46,7 +46,9 @@ jobs:
     runs-on: Ubuntu-latest
     steps:
        - uses: actions/checkout@v4
-       - name: complie
+       
+       - name: Build with Maven
+         working-directory: my-app   # <-- change if needed
          run: mvn compile
 
         
