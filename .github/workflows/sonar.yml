@@ -1,0 +1,21 @@
+name: CI with sonarqube
+
+on: 
+  push:
+    branches: ["main"]
+    
+jobs:
+  sonar:
+    runs-on: ubuntu-latest
+
+    steps: 
+      -  uses: actions/checkout@v4
+      -  name: SonarQube Scan
+         run: |
+          sonar-scanner \
+            -Dsonar.projectKey=program \
+            -Dsonar.sources=. \
+            -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} \
+            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+  
+
